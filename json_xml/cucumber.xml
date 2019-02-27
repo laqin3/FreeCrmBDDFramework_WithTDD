@@ -1,0 +1,360 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 19,
+        "name": "Creating differnt contacts",
+        "description": "",
+        "id": "login-and-creating-contacts;creating-differnt-contacts;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 24552410791,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is already in login page",
+            "match": {
+              "location": "LoginStepDefinition.user_is_already_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 26700328,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "title of login page is free crm",
+            "match": {
+              "location": "LoginStepDefinition.title_of_login_page_is_free_crm()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5780680054,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on Login_in button",
+            "match": {
+              "location": "LoginStepDefinition.click_on_Login_in_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 524225665,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user enters \"laqin3@gmail.com\" and \"laqin32019\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "laqin3@gmail.com",
+                  "offset": 13
+                },
+                {
+                  "val": "laqin32019",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginStepDefinition.user_enters_username_and_user_enter_password(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 195896839,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "LoginStepDefinition.user_clicks_on_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2023622360,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user is on home page",
+            "match": {
+              "location": "LoginStepDefinition.user_is_on_home_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1868648331,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user clicks on contacts button",
+            "match": {
+              "location": "LoginStepDefinition.user_clicks_on_contacts_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 650098944,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user clicks on new button",
+            "match": {
+              "location": "LoginStepDefinition.user_clicks_on_new_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "error_message": "cucumber.runtime.AmbiguousStepDefinitionsException: ✽.Then user enters \"Tom\" and \"Peter\" and \"manager\"(C:/Users/laqin3/eclipse-workspace/cucumber/FreeCrmBDDFramework_WithTDD/src/main/java/features/CreatingContacts.feature:13) matches more than one step definition:\n  ^user enters \"(.*)\" and \"(.*)\" and \"(.*)\"$ in LoginStepDefinition.user_enters_firstName_and_lastName_and_position(String,String,String)\n  ^user enters \"(.*)\" and \"(.*)\"$ in LoginStepDefinition.user_enters_username_and_user_enter_password(String,String)\n\r\n\tat cucumber.runtime.RuntimeGlue.stepDefinitionMatch(RuntimeGlue.java:71)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:267)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)\r\n",
+              "status": "failed"
+            },
+            "line": 13,
+            "name": "user enters \"Tom\" and \"Peter\" and \"manager\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Tom",
+                  "offset": 13
+                },
+                {
+                  "val": "Peter",
+                  "offset": 23
+                },
+                {
+                  "val": "manager",
+                  "offset": 35
+                }
+              ],
+              "location": "LoginStepDefinition.user_enters_firstName_and_lastName_and_position(String,String,String)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "user clicks save button",
+            "match": {
+              "location": "LoginStepDefinition.user_clicks_save_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "user close browser",
+            "match": {
+              "location": "LoginStepDefinition.user_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "Creating differnt contacts",
+        "description": "",
+        "id": "login-and-creating-contacts;creating-differnt-contacts;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10614472338,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is already in login page",
+            "match": {
+              "location": "LoginStepDefinition.user_is_already_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 19356554,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "title of login page is free crm",
+            "match": {
+              "location": "LoginStepDefinition.title_of_login_page_is_free_crm()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6525549609,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on Login_in button",
+            "match": {
+              "location": "LoginStepDefinition.click_on_Login_in_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 540572517,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user enters \"laqin3@gmail.com\" and \"laqin32019\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "laqin3@gmail.com",
+                  "offset": 13
+                },
+                {
+                  "val": "laqin32019",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginStepDefinition.user_enters_username_and_user_enter_password(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 142796556,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "LoginStepDefinition.user_clicks_on_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2009809903,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user is on home page",
+            "match": {
+              "location": "LoginStepDefinition.user_is_on_home_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 795819442,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user clicks on contacts button",
+            "match": {
+              "location": "LoginStepDefinition.user_clicks_on_contacts_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 187882346,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user clicks on new button",
+            "match": {
+              "location": "LoginStepDefinition.user_clicks_on_new_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "error_message": "cucumber.runtime.AmbiguousStepDefinitionsException: ✽.Then user enters \"Jim\" and \"John\" and \"Director\"(C:/Users/laqin3/eclipse-workspace/cucumber/FreeCrmBDDFramework_WithTDD/src/main/java/features/CreatingContacts.feature:13) matches more than one step definition:\n  ^user enters \"(.*)\" and \"(.*)\" and \"(.*)\"$ in LoginStepDefinition.user_enters_firstName_and_lastName_and_position(String,String,String)\n  ^user enters \"(.*)\" and \"(.*)\"$ in LoginStepDefinition.user_enters_username_and_user_enter_password(String,String)\n\r\n\tat cucumber.runtime.RuntimeGlue.stepDefinitionMatch(RuntimeGlue.java:71)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:267)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)\r\n",
+              "status": "failed"
+            },
+            "line": 13,
+            "name": "user enters \"Jim\" and \"John\" and \"Director\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Jim",
+                  "offset": 13
+                },
+                {
+                  "val": "John",
+                  "offset": 23
+                },
+                {
+                  "val": "Director",
+                  "offset": 34
+                }
+              ],
+              "location": "LoginStepDefinition.user_enters_firstName_and_lastName_and_position(String,String,String)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "user clicks save button",
+            "match": {
+              "location": "LoginStepDefinition.user_clicks_save_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "user close browser",
+            "match": {
+              "location": "LoginStepDefinition.user_close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "login and creating contacts",
+    "description": "",
+    "id": "login-and-creating-contacts",
+    "keyword": "Feature",
+    "uri": "C:/Users/laqin3/eclipse-workspace/cucumber/FreeCrmBDDFramework_WithTDD/src/main/java/features/CreatingContacts.feature"
+  }
+]

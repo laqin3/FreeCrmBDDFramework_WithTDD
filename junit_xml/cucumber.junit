@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="49.327804">
+<testcase classname="login and creating contacts" name="Creating differnt contacts" time="32.027146">
+<system-out><![CDATA[Given user is already in login page.........................................passed
+When title of login page is free crm........................................passed
+And click on Login_in button................................................passed
+Then user enters "laqin3@gmail.com" and "laqin32019"........................passed
+Then user clicks on login button............................................passed
+Then user is on home page...................................................passed
+Then user clicks on contacts button.........................................passed
+And user clicks on new button...............................................passed
+Then user enters contact details "Tom" and "Peter" and "manager"............passed
+And user clicks save button.................................................passed
+Then user close browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="login and creating contacts" name="Creating differnt contacts 2" time="17.300658">
+<system-out><![CDATA[Given user is already in login page.........................................passed
+When title of login page is free crm........................................passed
+And click on Login_in button................................................passed
+Then user enters "laqin3@gmail.com" and "laqin32019"........................passed
+Then user clicks on login button............................................passed
+Then user is on home page...................................................passed
+Then user clicks on contacts button.........................................passed
+And user clicks on new button...............................................passed
+Then user enters contact details "Jim" and "John" and "Director"............passed
+And user clicks save button.................................................passed
+Then user close browser.....................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
