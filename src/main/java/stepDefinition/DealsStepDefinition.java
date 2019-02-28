@@ -8,13 +8,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import cucumber.api.DataTable;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
-public class LoginStepDefinition {
-/*
+public class DealsStepDefinition {
+
 	WebDriver driver;
 
 	@Given("^user is already in login page$")
@@ -33,15 +35,16 @@ public class LoginStepDefinition {
 		Assert.assertEquals("Free CRM software in the cloud for sales and service", title);
 	}
 
-	@Then("^click on Login_in button$")
+	@And("^click on Login_in button$")
 	public void click_on_Login_in_button() {
 		driver.findElement(By.xpath("//a[@href='https://ui.cogmento.com']")).click();
 	}
 
-	@Then("^user enters \"(.*)\" and \"(.*)\"$")
-	public void user_enters_username_and_user_enter_password(String username, String password) {
-		driver.findElement(By.name("email")).sendKeys(username);
-		driver.findElement(By.name("password")).sendKeys(password);
+	@Then("^user enters username and password$")
+	public void user_enters_username_and_password(DataTable credentials) {
+		List<List<String>> data = credentials.raw();
+		driver.findElement(By.name("email")).sendKeys(data.get(0).get(0));
+		driver.findElement(By.name("password")).sendKeys(data.get(0).get(1));
 	}
 
 	@Then("^user clicks on login button$")
@@ -50,43 +53,36 @@ public class LoginStepDefinition {
 	}
 
 	@Then("^user is on home page$")
-	public void user_is_on_home_page() throws InterruptedException  {
-		String title2=driver.getTitle();
+	public void user_is_on_home_page() throws InterruptedException {
+		String title2 = driver.getTitle();
 		System.out.println("last page title is:  " + title2);
 		Assert.assertEquals("Cogmento CRM", title2);
 		Thread.sleep(2000);
 	}
 
-	@Then("^user clicks on contacts button$")
-	public void user_clicks_on_contacts_button()  {
-		WebElement mainMenu=driver.findElement(By.xpath("//div[@id='main-nav']"));
-		List<WebElement> menuItems=mainMenu.findElements(By.tagName("a"));
-		for(WebElement item:menuItems) {
-			String itemText=item.getText();
-			if(itemText.equalsIgnoreCase("Contacts")) {
+	@Then("^user moves to new deals page$")
+	public void user_moves_to_new_deals_page() {
+
+		WebElement mainMenu = driver.findElement(By.xpath("//div[@id='main-nav']"));
+		List<WebElement> menuItems = mainMenu.findElements(By.tagName("a"));
+		for (WebElement item : menuItems) {
+			String itemText = item.getText();
+			if (itemText.equalsIgnoreCase("Deals")) {
 				item.click();
 			}
 		}
-		
-	}
-
-	@Then("^user clicks on new button$")
-	public void user_clicks_on_new_button()  {
-		//driver.findElement(By.xpath("//div[@className='item']/a")).click();
 		driver.findElement(By.xpath("//*[text()='New']")).click();
 	}
-	
-	@Then("^user enters contact details \"(.*)\" and \"(.*)\" and \"(.*)\"$")
-	public void user_enters_firstName_and_lastName_and_position (String firstName, String lastName, String position) {
-		driver.findElement(By.name("first_name")).sendKeys(firstName);
-		driver.findElement(By.name("last_name")).sendKeys(lastName);
-		driver.findElement(By.name("position")).sendKeys(position);
-	}
-	
-	@Then("^user clicks save button$")
-	public void user_clicks_save_button() {
-		driver.findElement(By.xpath("//button[text()='Save']")).click();
-	
+
+	@Then("^user enters deal details$") 
+	public void user_enters_deal_details(DataTable dealData) throws InterruptedException {
+		List<List<String>> dealValues=dealData.raw();
+		
+		driver.findElement(By.name("title")).sendKeys(dealValues.get(0).get(0));
+		driver.findElement(By.name("amount")).sendKeys(dealValues.get(0).get(1));
+		driver.findElement(By.name("probability")).sendKeys(dealValues.get(0).get(2));
+		driver.findElement(By.name("commission")).sendKeys(dealValues.get(0).get(3));
+		Thread.sleep(2000);
 	}
 
 	@Then("^user close browser$")
@@ -96,5 +92,5 @@ public class LoginStepDefinition {
 			driver.quit();
 		}
 	}
-*/
+
 }
