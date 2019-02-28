@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -15,9 +16,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
-public class DealsStepDefinition {
-
-/*	WebDriver driver;
+public class DealStepWithMapDefinition {
+	WebDriver driver;
 
 	@Given("^user is already in login page$")
 	public void user_is_already_in_login_page() {
@@ -42,9 +42,10 @@ public class DealsStepDefinition {
 
 	@Then("^user enters username and password$")
 	public void user_enters_username_and_password(DataTable credentials) {
-		List<List<String>> data = credentials.raw();
-		driver.findElement(By.name("email")).sendKeys(data.get(0).get(0));
-		driver.findElement(By.name("password")).sendKeys(data.get(0).get(1));
+		for(Map<String,String> data : credentials.asMaps(String.class, String.class)) {
+		driver.findElement(By.name("email")).sendKeys(data.get("username"));
+		driver.findElement(By.name("password")).sendKeys(data.get("password"));
+		}
 	}
 
 	@Then("^user clicks on login button$")
@@ -76,13 +77,38 @@ public class DealsStepDefinition {
 
 	@Then("^user enters deal details$") 
 	public void user_enters_deal_details(DataTable dealData) throws InterruptedException {
-		List<List<String>> dealValues=dealData.raw();
+		for(Map<String, String> deal : dealData.asMaps(String.class, String.class)) {
 		
-		driver.findElement(By.name("title")).sendKeys(dealValues.get(0).get(0));
-		driver.findElement(By.name("amount")).sendKeys(dealValues.get(0).get(1));
-		driver.findElement(By.name("probability")).sendKeys(dealValues.get(0).get(2));
-		driver.findElement(By.name("commission")).sendKeys(dealValues.get(0).get(3));
-		Thread.sleep(2000);
+		driver.findElement(By.name("title")).sendKeys(deal.get("title"));
+		driver.findElement(By.name("amount")).sendKeys(deal.get("Amount"));
+		driver.findElement(By.name("probability")).sendKeys(deal.get("probability"));
+		driver.findElement(By.name("commission")).sendKeys(deal.get("commission"));
+		Thread.sleep(500);
+		
+		driver.findElement(By.xpath("//*[text()='Save']")).click();
+		
+		//come back to new deals again
+				driver.navigate().refresh();
+				
+		WebElement mainMenu = driver.findElement(By.xpath("//div[@id='main-nav']"));
+		List<WebElement> menuItems = mainMenu.findElements(By.tagName("a"));
+		for (WebElement item : menuItems) {
+			String itemText = item.getText();
+			System.out.println(itemText);
+			if (itemText.equalsIgnoreCase("Deals")) {
+				item.click();
+				break;
+			}
+		}
+		
+		
+		
+		
+		driver.findElement(By.xpath("//*[text()='New']")).click();
+		
+		
+		
+		}
 	}
 
 	@Then("^user close browser$")
@@ -92,5 +118,5 @@ public class DealsStepDefinition {
 			driver.quit();
 		}
 	}
-*/
+
 }

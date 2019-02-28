@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="19.216496">
-<testcase classname="deal data creation" name="Free Crm create a new deal scenario" time="19.216496">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="28.614243">
+<testcase classname="deal data creation" name="Free Crm create a new deal scenario" time="28.614243">
 <system-out><![CDATA[Given user is already in login page.........................................passed
 When title of login page is free crm........................................passed
 And click on Login_in button................................................passed
