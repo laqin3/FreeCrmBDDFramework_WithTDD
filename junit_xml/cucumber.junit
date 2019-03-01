@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.148284">
-<testcase classname="Free CRM application testing" name="browser close" time="0.148284">
-<system-out><![CDATA[Given this is close browser test............................................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="0.206907">
+<testcase classname="test tagged hooks" name="this is first test" time="0.200541">
+<system-out><![CDATA[Given this is first step....................................................passed
+When this is second step....................................................passed
+Then this is third step.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="test tagged hooks" name="this is second test" time="0.002299">
+<system-out><![CDATA[Given this is first step....................................................passed
+When this is second step....................................................passed
+Then this is third step.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="test tagged hooks" name="this is third test" time="0.004067">
+<system-out><![CDATA[Given this is first step....................................................passed
+When this is second step....................................................passed
+Then this is third step.....................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
